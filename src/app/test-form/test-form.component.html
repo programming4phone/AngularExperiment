@@ -1,0 +1,40 @@
+
+
+
+<fieldset>
+  <legend>Employee Form</legend>
+    <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+      <div class="ui-g">
+        <div class="ui-g-2"><label for="fname">First Name</label></div>
+        <div class="ui-g-2"><input id="fname" type="text" required [(ngModel)]="employee.firstname" name="firstname" #firstname="ngModel"/></div>
+        <div class="ui-g-8"></div>
+        <div class="ui-g-12">
+          <div [style.color]="'red'" [hidden]="firstname.valid || firstname.pristine"></div>
+        </div>
+        
+
+        <div class="ui-g-2"><label for="lname">Last Name</label></div>
+        <div class="ui-g-2"><input id="lname" type="text" [(ngModel)]="employee.lastname" name="lastname"/></div>
+        <div class="ui-g-8"></div>
+
+        <div class="ui-g-2"><label for="epos">Position</label></div>
+        <div class="ui-g-2"><input id="epos" type="text" [(ngModel)]="employee.position" name="position" /></div>
+        <div class="ui-g-8"></div>
+
+        <div class="ui-g-2"><label for="esal">Salary</label></div>
+        <div class="ui-g-2"><input id="esal" type="text" [(ngModel)]="employee.salary" name="salary"/></div>
+        <div class="ui-g-8"></div>
+
+        <div class="ui-g-2"></div>
+        <div class="ui-g-2"><button type="submit">Submit</button></div>
+        <div class="ui-g-8"></div>
+
+        <div class="ui-g-2"></div>
+        <div class="ui-g-2"><button type="button" (click)="newEmployee(); employeeForm.reset()">Reset</button></div>
+        <div class="ui-g-8"></div>
+
+      </div>
+    </form>
+</fieldset>
+{{ msg }}
+{{ diagnostic }}

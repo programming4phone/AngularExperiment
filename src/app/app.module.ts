@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TestInputComponent } from './test-input/test-input.component';
@@ -9,6 +9,8 @@ import { TestViewchildComponent } from './test-viewchild/test-viewchild.componen
 import { TwoWayComponent } from './two-way/two-way.component';
 import { TestHostComponent } from './test-host/test-host.component';
 import { HoverDirective } from './directives/hover.directive';
+import { TestFormComponent } from './test-form/test-form.component';
+import { RefsDirective } from './directives/refs.directive';
 
 
 @NgModule({
@@ -19,10 +21,13 @@ import { HoverDirective } from './directives/hover.directive';
     TestViewchildComponent,
     TwoWayComponent,
     TestHostComponent,
-    HoverDirective
+    HoverDirective,
+    TestFormComponent,
+    RefsDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
